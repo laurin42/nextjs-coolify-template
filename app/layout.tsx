@@ -21,13 +21,14 @@ export default function RootLayout({
       className="min-h-screen overflow-x-hidden"
     >
       <body className="antialiased min-h-screen">
-        <Header />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
+
           <SmoothScrollProvider>{children}</SmoothScrollProvider>
         </ThemeProvider>
       </body>

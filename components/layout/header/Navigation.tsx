@@ -54,8 +54,8 @@ export default function Navigation() {
   };
 
   return (
-    <div className="flex items-center w-full justify-between px-6 h-20">
-      <div className="text-xl tracking-widest font-semibold">
+    <div className="flex items-center w-full justify-between h-20 text-background">
+      <div className="block sm:hidden text-xl  tracking-widest font-semibold">
         <Link href="/">
           {activeSection === "home" || !isHomePage
             ? "PROJECT"
@@ -74,8 +74,8 @@ export default function Navigation() {
                   onClick={() => handleMenuClick(item.href)}
                   className={`relative cursor-pointer transition-colors duration-300 group ${
                     isActive
-                      ? "text-accentPrimary font-medium"
-                      : "hover:text-accentPrimary/80"
+                      ? "text-accent-primary font-medium"
+                      : "hover:text-accent-primary/80"
                   }`}
                 >
                   {item.label}
@@ -87,10 +87,10 @@ export default function Navigation() {
             );
           })}
         </ul>
-        <div className="nav-anim-item">
-          <ModeToggle />
-        </div>
       </nav>
+      <div className="hidden sm:block">
+        <ModeToggle />
+      </div>
 
       <div className="sm:hidden flex items-center gap-4">
         <ModeToggle />
