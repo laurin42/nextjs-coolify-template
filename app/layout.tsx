@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 import SmoothScrollProvider from "@/components/layout/SmoothScrollProvider";
 
 export const metadata: Metadata = {
@@ -19,7 +20,14 @@ export default function RootLayout({
       className="min-h-screen overflow-x-hidden"
     >
       <body className="antialiased min-h-screen">
-        <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
