@@ -13,8 +13,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="de">
-      <body>
+    <html
+      lang="de"
+      suppressHydrationWarning
+      className="min-h-screen overflow-x-hidden"
+    >
+      <body className="antialiased min-h-screen">
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>
