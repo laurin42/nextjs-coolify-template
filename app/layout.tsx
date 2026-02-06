@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/layout/header/Header";
 import { ThemeProvider } from "@/components/theme-provider";
 import SmoothScrollProvider from "@/components/layout/SmoothScrollProvider";
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       className="min-h-screen overflow-x-hidden"
     >
       <body className="antialiased min-h-screen">
+        <Header />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

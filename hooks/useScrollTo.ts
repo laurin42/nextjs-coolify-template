@@ -3,7 +3,7 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 export const useScrollTo = () => {
   return useCallback((id: string) => {
-    const targetId = id.replace("#", "");
+    const targetId = id;
     const smoother = ScrollSmoother.get();
 
     if (smoother) {
